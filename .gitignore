@@ -1,0 +1,34 @@
+# Archivos de compilación de LaTeX
+*.aux
+*.bbl
+*.blg
+*.bcf
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+*.lof
+*.lot
+*.nav
+*.snm
+
+
+
+# Archivos de backup
+*~
+*.bak
+*.swp
+# Archivos PDF generados
+*.pdf
+
+# Solo incluir estos manualmente
+!*.tex
+!*.cls
+!*.bib
+!*.png
+!*.jpg
+!*.jpeg
+
