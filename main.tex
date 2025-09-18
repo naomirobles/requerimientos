@@ -114,7 +114,7 @@
  un motor de recomendaciones educativas basado en análisis de palabras clave. Ofreciendo una conexión directa hentre recursos educativos y 
  gestión de actividades, alineando planificación y ejecución en un mismo entorno.\\\\
  Los requisitos de \textit{software} establecen las especificaciones detalladas que definen que debe hacer un sistema, cómo debe 
- comportarse y bajo que condiciones debe operar \autocite{Requirements2024}. Este documento  tiene como propósito establecer de
+ comportarse y bajo qué condiciones debe operar \autocite{Requirements2024}. Este documento  tiene como propósito establecer de
  manera precisa y completa todas las funcionalidades, características y restricciones que deberá cumplir el sistema de gestión de
  tareas académicas y profesionales, garantizando así el desarrollo de una solución que satisfaga plenamente las necesidades identificadas. 
 
@@ -211,21 +211,21 @@
     \hline
     Disponibilidad & \textbf{RNF2} El sistema deberá garantizar una disponibilidad mínima del \textbf{99.5\%} mensualmente (excluyendo ventanas de mantenimiento programado). \\ 
     \hline
-    Seguridad & \textbf{RNF3} Autenticación segura (contraseñas almacenadas con hashing fuerte: bcrypt/argon2). \newline
+    Seguridad & \textbf{RNF3} Autenticación segura (contraseñas almacenadas con hashing). \newline
                 \textbf{RNF3} Todas las comunicaciones entre cliente y servidor deben estar cifradas mediante protocolo HTTPS. \newline
                 \textbf{RNF3} Los usuarios deben autenticarse mediante credenciales seguras y el sistema debe implementar bloqueo tras 3 intentos fallidos. \\ 
     \hline
     Usabilidad & \textbf{RNF4} Interfaz intuitiva y consistente; realizar las principales acciones (crear tarea, marcar completada, editar) en \textbf{máximo 3 clics}. \newline
-                \textbf{RNF4} Soporte móvil (diseño mobile-first) y escritorio. \\ 
+                \textbf{RNF4} Soporte móvil y escritorio. \\ 
     \hline
-    Compatibilidad & \textbf{RNF5} Funcionamiento garantizado en las dos últimas versiones de navegadores modernos: Chrome, Firefox, Edge y Safari; versión adaptada para navegadores móviles equivalentes. \\ 
+    Compatibilidad & \textbf{RNF5} Funcionamiento garantizado en navegadores modernos: Chrome, Firefox, Edge y Safari; versión adaptada para navegadores móviles equivalentes. \\ 
     \hline
     Mantenibilidad & \textbf{RNF6} Código modular y documentado.\\ 
     \hline
-    Respaldo y Recuperación & \textbf{RNF7} Copias de seguridad automáticas de la base de datos con retención mínima de \textbf{30 días}. \newline
-                             \textbf{RNF7} Objetivos: \textbf{RTO (tiempo de recuperación)} < 4 horas y \textbf{RPO (pérdida de datos máxima)} < 1 hora. \\ 
+    Respaldo y Rendimiento & \textbf{RNF7} Copias de seguridad automáticas de la base de datos con retención mínima de \textbf{30 días}. \newline
+                             \textbf{RNF7} El sistema debe soportar al menos 100 usuarios concurrentes sin degradación del rendimiento.\\ 
     \hline
-    Recomendaciones & \textbf{RNF8} Las recomendaciones generadas al crear una tarea deberán presentarse en pantalla en menos de \textbf{3 segundos}.\\ 
+    Recomendaciones & \textbf{RNF8} Las recomendaciones generadas al crear una tarea deberán presentarse en pantalla en menos de \textbf{5 segundos}.\\ 
     \hline
     Legal y Ética & \textbf{RNF9} Incluir términos y condiciones y política de privacidad. \newline
                    \textbf{RNF9} Las recomendaciones deben evitar contenidos que violen derechos de autor o políticas de contenido inapropiado. \\ 
@@ -235,8 +235,216 @@
     \label{tab:nfr}
 \end{table}
 
+\pagebreak
 \section{Historias de Usuario}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|p{15cm}|}
+    \hline
+    \textbf{Historia: } Registro de tareas\\
+    \hline
+    \textbf{Descripción: }Como profesional, necesito asignar fechas límite y estimar el tiempo que me tomará cada tarea para planificar mejor mi agenda y 
+    cumplir con mis compromisos.\\
+    \hline
+    \textbf{Resultado: } Tareas programadas con fechas límite y tiempo estimado.\\
+    \hline
+    \textbf{Criterio de aceptación: } El usuario puede establecer fecha límite y duración estimada, y el sistema muestra indicadores visuales para 
+    tareas próximas a vencer o vencidas.\\
+    \hline
+    \end{tabular}
+    \caption{Programación de tareas con fechas}
+    \label{user-story1}
+\end{table}
 
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|p{15cm}|}
+    \hline
+    \textbf{Historia: } Modificación de tareas existentes\\
+    \hline
+    \textbf{Descripción: }Como usuario, necesito editar las tareas existentes para actualizar su información, cambiar fechas límite 
+    o modificar descripciones según cambien mis necesidades.\\
+    \hline
+    \textbf{Resultado: }Tarea modificada con la información actualizada.\\
+    \hline
+    \textbf{Criterio de aceptación: } El usuario puede editar cualquier campo de sus tareas existentes, guardar los cambios y ver la 
+    información actualizada inmediatamente en todas las vistas.\\
+    \hline
+    \end{tabular}
+    \caption{Modificación de tareas existentes}
+    \label{user-story2}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|p{15cm}|}
+    \hline
+    \textbf{Historia: } Eliminación de tareas\\
+    \hline
+    \textbf{Descripción: }Como usuario, necesito eliminar tareas que ya no son relevantes o fueron 
+    creadas por error para mantener mi lista organizada.\\
+    \hline
+    \textbf{Resultado: } Tarea eliminada permanentemente del sistema.\\
+    \hline
+    \textbf{Criterio de aceptación: }El usuario puede eliminar una tarea mediante confirmación, y esta 
+    desaparece de todas las vistas sin posibilidad de recuperación.\\
+    \hline
+    \end{tabular}
+    \caption{Eliminación de tareas}
+    \label{user-story3}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|p{15cm}|}
+    \hline
+    \textbf{Historia: } Visualización mensual de tareas\\
+    \hline
+    \textbf{Descripción: }Como usuario con múltiples tareas, necesito ver todas mis tareas distribuidas en un calendario mensual 
+    para tener una perspectiva clara de mi carga de trabajo.\\
+    \hline
+    \textbf{Resultado: } Vista de calendario mostrando todas las tareas del mes.\\
+    \hline
+    \textbf{Criterio de aceptación: }El usuario puede acceder a una vista de calendario que muestra las tareas en sus fechas 
+    correspondientes, con posibilidad de hacer clic para ver detalles o editar.\\
+    \hline
+    \end{tabular}
+    \caption{Vista de calendario mensual}
+    \label{user-story3}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|p{15cm}|}
+    \hline
+    \textbf{Historia: } Creación de categorías personalizadas\\
+    \hline
+    \textbf{Descripción: }Como usuario, necesito crear categorías personalizadas para clasificar
+     mis tareas según mis propios criterios de organización (trabajo, personal, estudio, materias, etc.).\\
+    \hline
+    \textbf{Resultado: } Nuevas categorías creadas y disponibles para asignar a tareas.\\
+    \hline
+    \textbf{Criterio de aceptación: } El usuario puede crear y asignar categorías con nombre único y color }
+    distintivo, y estas aparecen disponibles al crear o editar tareas.\\
+    \hline
+    \end{tabular}
+    \caption{Creación de categorías personalizadas}
+    \label{user-story4}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|p{15cm}|}
+    \hline
+    \textbf{Historia: } Visualización selectiva de tareas\\
+    \hline
+    \textbf{Descripción: }Como usuario con muchas tareas, necesito filtrar mi lista por categorías 
+    específicas para enfocarme solo en las tareas de un tipo particular.\\
+    \hline
+    \textbf{Resultado: } Vista de tareas filtrada según la categoría seleccionada.\\
+    \hline
+    \textbf{Criterio de aceptación: } El usuario puede seleccionar una o múltiples categorías y ver solo las tareas 
+    correspondientes, con opción de limpiar filtros para ver todas las tareas.\\
+    \hline
+    \end{tabular}
+    \caption{Filtrado por categorías}
+    \label{user-story5}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|p{15cm}|}
+    \hline
+    \textbf{Historia: } Información detallada de tareas\\
+    \hline
+    \textbf{Descripción: }Como usuario, necesito agregar notas, instrucciones detalladas o comentarios adicionales a
+     mis tareas para recordar información importante o pasos específicos.\\
+    \hline
+    \textbf{Resultado: } Tareas con información adicional almacenada.\\
+    \hline
+    \textbf{Criterio de aceptación: } El usuario puede agregar texto libre en un campo de notas que se guarda 
+    con la tarea y es visible al editarla o revisarla.\\
+    \hline
+    \end{tabular}
+    \caption{Notas adicionales en tareas}
+    \label{user-story6}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|p{15cm}|}
+    \hline
+    \textbf{Historia: }Sugerencias automáticas de recursos académicos\\
+    \hline
+    \textbf{Descripción: }Como estudiante o profesional, necesito recibir recomendaciones automáticas de artículos, videos o 
+    recursos web relacionados con mis tareas para apoyar mi investigación y aprendizaje.\\
+    \hline
+    \textbf{Resultado: }Lista de recursos recomendados generados automáticamente.\\
+    \hline
+    \textbf{Criterio de aceptación: } Al crear o ver una tarea, el sistema genera y muestra 3-5 recursos relevantes
+     (enlaces, artículos, videos) basados en el título y descripción de la tarea.\\
+    \hline
+    \end{tabular}
+    \caption{Recomendaciones de recursos de consulta}
+    \label{user-story7}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|p{15cm}|}
+    \hline
+    \textbf{Historia: } Recomendaciones personalizadas por perfil\\
+    \hline
+    \textbf{Descripción: }Como usuario con un perfil académico específico, necesito recibir recomendaciones de 
+    recursos y organización adaptadas a mi nivel de estudios y área de especialización.\\
+    \hline
+    \textbf{Resultado: } Recomendaciones personalizadas según el perfil del usuario.\\
+    \hline
+    \textbf{Criterio de aceptación: } El sistema utiliza la información del perfil académico del usuario (grado de estudios, 
+    área de especialización) para generar recomendaciones más precisas y apropiadas para su nivel.\\
+    \hline
+    \end{tabular}
+    \caption{Recomendaciones personalizadas por perfil}
+    \label{user-story8}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|p{15cm}|}
+    \hline
+    \textbf{Historia: } Almacenamiento de recursos útiles\\
+    \hline
+    \textbf{Descripción: }Como usuario, necesito poder guardar las recomendaciones de consulta que considero útiles para poder 
+    acceder a ellas fácilmente cada vez que abra el detalle de la tarea sin tener que buscarlas nuevamente.\\
+    \hline
+    \textbf{Resultado: } Recomendaciones seleccionadas guardadas y visibles en el detalle de la tarea.\\
+    \hline
+    \textbf{Criterio de aceptación: }El usuario puede marcar recomendaciones como favoritas mediante un botón o ícono, estas se guardan 
+    permanentemente y aparecen destacadas cada vez que abre el detalle de la tarea.\\
+    \hline
+    \end{tabular}
+    \caption{Guardado de recomendaciones favoritas}
+    \label{user-story9}
+\end{table}
+
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|p{15cm}|}
+    \hline
+    \textbf{Historia: } Feedback de recomendaciones para mejora del sistema\\
+    \hline
+    \textbf{Descripción: }CComo usuario, necesito poder indicar si una recomendación de consulta fue útil o
+     no para que el sistema aprenda de mis preferencias y mejore las futuras sugerencias.\\
+    \hline
+    \textbf{Resultado: } Feedback del usuario registrado para mejorar el algoritmo de recomendaciones.\\
+    \hline
+    \textbf{Criterio de aceptación: } El usuario puede marcar una recomendación como "útil" o "no útil" mediante botones simples, 
+    el sistema almacena esta retroalimentación y la utiliza para personalizar futuras recomendaciones del usuario.\\
+    \hline
+    \end{tabular}
+    \caption{Feedback de recomendaciones}
+    \label{user-story10}
+\end{table}
 %%%%%%%%%% BIBLIOGRAFÍA %%%%%%%%%%%%%%%%%%%%%
 \pagebreak
 \printbibliography[heading=bibintoc]
