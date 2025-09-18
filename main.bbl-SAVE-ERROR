@@ -1,0 +1,59 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{none/global//global/global/global}
+    \entry{Requirements2024}{online}{}{}
+      \name{author}{1}{}{%
+        {{hash=0686dd37c9146ef606242200164963a8}{%
+           family={{Requirements.com Staff}},
+           familyi={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Requirements.com}%
+      }
+      \strng{namehash}{0686dd37c9146ef606242200164963a8}
+      \strng{fullhash}{0686dd37c9146ef606242200164963a8}
+      \strng{fullhashraw}{0686dd37c9146ef606242200164963a8}
+      \strng{bibnamehash}{0686dd37c9146ef606242200164963a8}
+      \strng{authorbibnamehash}{0686dd37c9146ef606242200164963a8}
+      \strng{authornamehash}{0686dd37c9146ef606242200164963a8}
+      \strng{authorfullhash}{0686dd37c9146ef606242200164963a8}
+      \strng{authorfullhashraw}{0686dd37c9146ef606242200164963a8}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{day}{12}
+      \field{month}{7}
+      \field{note}{[Online]. Available: \url{https://requirements.com/Content/What-is/what-are-functional-requirements}}
+      \field{title}{What are Functional Requirements?}
+      \field{year}{2024}
+      \field{dateera}{ce}
+      \verb{urlraw}
+      \verb https://requirements.com/Content/What-is/what-are-functional-requirements
+      \endverb
+      \verb{url}
+      \verb https://requirements.com/Content/What-is/what-are-functional-requirements
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

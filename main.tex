@@ -39,6 +39,8 @@
 \usepackage[colorlinks=true,plainpages=true,citecolor=blue,linkcolor=black]{hyperref}
 \usepackage{fancyhdr} 
 \usepackage{url}
+\usepackage{longtable}
+
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[L]{\footnotesize Ingeniería de Software para Sistemas Inteligentes} 
@@ -104,10 +106,6 @@
 
 \include{portada}                                                     
 
-%%%%%%%%%%%%%%%%%%%% ÍNDICES %%%%%%%%%%%%%%%%%%%%%%%%%%
-\tableofcontents 
-\pagebreak
-
 
 %%%%%%%%%%%%%%%%% CUERPO %%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -118,10 +116,8 @@
  Los requisitos de \textit{software} establecen las especificaciones detalladas que definen que debe hacer un sistema, cómo debe 
  comportarse y bajo que condiciones debe operar \autocite{Requirements2024}. Este documento  tiene como propósito establecer de
  manera precisa y completa todas las funcionalidades, características y restricciones que deberá cumplir el sistema de gestión de
- tareas académicas y profesionales, garantizando así el desarrollo de una solución que satisfaga plenamente las necesidades identificadas.
- \\\\
- 
-\vspace{0.7cm}
+ tareas académicas y profesionales, garantizando así el desarrollo de una solución que satisfaga plenamente las necesidades identificadas. 
+
 \section{Requerimientos Funcionales}
 \begin{table}[H]
     \centering
@@ -159,6 +155,19 @@
     \hline
     RF2.6 & El sistema permite al usuario eliminar tareas. \\
     \hline
+    \end{tabular}
+    \label{tab:requisitos-funcionales-1}
+\end{table}
+
+%%%%
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|p{2cm}|p{13cm}|}
+    \hline
+    \multicolumn{2}{|c|}{\textbf{2. Registro de Tarea}} \\
+    \hline
+    \textbf{Clave} & \textbf{Descripción } \\
+    \hline
     RF2.7 & Al registrar o editar una tarea el usuario puede crear una categoría para la misma.\\
     \hline
     RF2.8 & El sistema permite al usuario ver las tareas organizadas por categorías. \\
@@ -173,17 +182,25 @@
     \hline
     \multicolumn{2}{|c|}{\textbf{3. Recomendación de recursos para consulta}} \\
     \hline
-    RF3.1 & Al agregar una tarea, el sistema genera recomendaciones de consulta (enlaces a artículos, video o páginas web)  \\
+    RF3.1 & Al agregar una tarea, el sistema genera recomendaciones de consulta (enlaces a artículos, video o páginas web).  \\
     \hline
     RF3.2 & El sistema genera recomendaciones con base al titulo de la tarea y al grado académico que el usuario ingresó al crear la cuenta.\\   
     \hline
-    
+    RF3.3 & El usuario puede guardar las sugerencias de consulta, haciendo que aparezcan cada vez que abre el detalle de la tarea.\\
+    \hline
+    RF3.4 & El sistema permite al usuario indicar si una recomendación de consulta no fue útil para él, el sistema tomará esta opinicón en
+    cuenta para próximas recomendaciones. \\
+    \hline
     \end{tabular}
-
-    \label{tab:wumpus}
+    \caption{Requisitos funcionales consolidados para el sistema de gestión de tareas académicas y profesionales}
+    \label{tab:requisitos-funcionales-2}
 \end{table}
 %--------------
+\pagebreak
+
 \section{Requerimientos No Funcionales}
+
+
 \section{Historias de Usuario}
 
 %%%%%%%%%% BIBLIOGRAFÍA %%%%%%%%%%%%%%%%%%%%%
