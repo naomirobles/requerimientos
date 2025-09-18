@@ -88,6 +88,7 @@
 }
 
 \lstset{style=mystyle}
+\renewcommand{\arraystretch}{1.3} % Aumenta el espacio entre filas en tablas
 
 % --- Archivo de bibliografía -----------------
 \addbibresource{repbib.bib}
@@ -112,6 +113,66 @@
 
 \section{Introducción}
 \section{Requerimientos Funcionales}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|p{2cm}|p{13cm}|}
+    \hline
+    \multicolumn{2}{|c|}{\textbf{1. Cuenta e Inicio de Sesión}} \\
+    \hline
+    \textbf{Clave} & \textbf{Descripción } \\
+    \hline
+    RF1.1 & El sistema permite al usuario crear una cuenta ingresando correo electrónico, contraseña,
+     país de origen y último grado de estudios. \\
+     \hline
+    RF1.2 & El sistema permite al usuario iniciar sesión con su correo electrónico y contraseña registradas. \\
+    \hline
+    RF1.3 & El sistema permite al usuario recuperar su contraseña mediante un correo electrónico de recuperación.\\
+    \hline
+    RF1.4 & El sistema permite al usuario ver y actualizar su perfil, incluyendo nombre, foto de perfil, país de origen y último grado de estudios. \\
+    \hline
+    RF1.5 & El sistema permite al usuario terminar su sesión.\\
+    \hline
+    \multicolumn{2}{|c|}{\textbf{2. Registro de Tareas}} \\
+    \hline
+    RF2.1 & Dado un usuario autenticado, al dar cloc en "Nueva tarea", el sistema abre un modal donde el usuario puede ingresar el título, descripción
+     y fecha de vencimiento de la tarea. \\
+    \hline
+    RF2.2 & Tras ingresar los datos de la tarea, al dar clic en "Guardar", el sistema almacena la tarea en la base de datos con la etiqueta de "Todo".\\
+    \hline
+    RF2.3 & Al registrar una tarea además de especificar la fecha límite de la tarea, el usuario puede especificar el plazo en el que desea realizarla, es decir,
+     los días en el que desea trabajar en la tarea. \\
+    \hline
+    RF2.4 & Dado un usuario con tareas registradas en el mes, cuando abre la vista mensual, entonces cada día muestra una etiqueta/contador con las tareas 
+    y al hacer clic se ve el detalle y acceso para editar. \\
+    \hline
+    RF2.5 & El sistema permite al usuario modificar tareas. \\
+    \hline
+    RF2.6 & El sistema permite al usuario eliminar tareas. \\
+    \hline
+    RF2.7 & Al registrar o editar una tarea el usuario puede crear una categoría para la misma.\\
+    \hline
+    RF2.8 & El sistema permite al usuario ver las tareas organizadas por categorías. \\
+    \hline
+    RF2.9 & Al registrar o editar una tarea el usuario puede elegir una categoría existente para clasificarla.\\
+    \hline
+    RF2.10 & Las tareas con plazo se mostrarán como una etiqueta sobre la vista de calendario en los días especificados.\\
+    \hline
+    RF2.11 & El sistema permite al usuario marcar tareas como completadas. \\
+    \hline
+    RF2.12 & Una tarea que haya sido marcada como completada, se vera en la vista de calendario con una línea horizontal sobre el título de la tarea.\\
+    \hline
+    \multicolumn{2}{|c|}{\textbf{3. Recomendación de recursos para consulta}} \\
+    \hline
+    RF3.1 & Al agregar una tarea, el sistema genera recomendaciones de consulta (enlaces a artículos, video o páginas web)  \\
+    \hline
+    RF3.2 & El sistema genera recomendaciones con base al titulo de la tarea y al grado académico que el usuario ingresó al crear la cuenta.\\   
+    \hline
+    
+    \end{tabular}
+
+    \label{tab:wumpus}
+\end{table}
+%--------------
 \section{Requerimientos No Funcionales}
 \section{Historias de Usuario}
 \end{document}
