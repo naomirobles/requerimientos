@@ -199,7 +199,41 @@
 \pagebreak
 
 \section{Requerimientos No Funcionales}
-
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|p{3cm}|p{12cm}|}
+    \hline
+    \multicolumn{2}{|c|}{\textbf{Requerimientos No Funcionales (RNF)}} \\
+    \hline
+    \textbf{Categoría} & \textbf{Descripción} \\
+    \hline
+    Rendimiento & \textbf{RNF1} Las operaciones de interacción básica en la interfaz (abrir modal, guardar/editar tarea, navegar entre vistas) deberán responder en menos de \textbf{300 ms} en el 95\% de las peticiones bajo carga nominal. \\ 
+    \hline
+    Disponibilidad & \textbf{RNF2} El sistema deberá garantizar una disponibilidad mínima del \textbf{99.5\%} mensualmente (excluyendo ventanas de mantenimiento programado). \\ 
+    \hline
+    Seguridad & \textbf{RNF3} Autenticación segura (contraseñas almacenadas con hashing fuerte: bcrypt/argon2). \newline
+                \textbf{RNF3} Todas las comunicaciones entre cliente y servidor deben estar cifradas mediante protocolo HTTPS. \newline
+                \textbf{RNF3} Los usuarios deben autenticarse mediante credenciales seguras y el sistema debe implementar bloqueo tras 3 intentos fallidos. \\ 
+    \hline
+    Usabilidad & \textbf{RNF4} Interfaz intuitiva y consistente; realizar las principales acciones (crear tarea, marcar completada, editar) en \textbf{máximo 3 clics}. \newline
+                \textbf{RNF4} Soporte móvil (diseño mobile-first) y escritorio. \\ 
+    \hline
+    Compatibilidad & \textbf{RNF5} Funcionamiento garantizado en las dos últimas versiones de navegadores modernos: Chrome, Firefox, Edge y Safari; versión adaptada para navegadores móviles equivalentes. \\ 
+    \hline
+    Mantenibilidad & \textbf{RNF6} Código modular y documentado.\\ 
+    \hline
+    Respaldo y Recuperación & \textbf{RNF7} Copias de seguridad automáticas de la base de datos con retención mínima de \textbf{30 días}. \newline
+                             \textbf{RNF7} Objetivos: \textbf{RTO (tiempo de recuperación)} < 4 horas y \textbf{RPO (pérdida de datos máxima)} < 1 hora. \\ 
+    \hline
+    Recomendaciones & \textbf{RNF8} Las recomendaciones generadas al crear una tarea deberán presentarse en pantalla en menos de \textbf{3 segundos}.\\ 
+    \hline
+    Legal y Ética & \textbf{RNF9} Incluir términos y condiciones y política de privacidad. \newline
+                   \textbf{RNF9} Las recomendaciones deben evitar contenidos que violen derechos de autor o políticas de contenido inapropiado. \\ 
+    \hline
+    \end{tabular}
+    \caption{Requerimientos no funcionales principales}
+    \label{tab:nfr}
+\end{table}
 
 \section{Historias de Usuario}
 
